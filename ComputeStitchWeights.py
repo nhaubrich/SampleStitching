@@ -129,3 +129,34 @@ if __name__ == "__main__":
 
         leg = ax.legend(bbox_to_anchor=(1,1), loc="upper left")
         plt.savefig("Vptstitched.png",bbox_inches="tight")
+
+
+
+    exportDict = {}
+    VptBins_axis = stitchResults['reweighting'][list(stitchResults["reweighting"].values().keys())[0]].axis("VptBins")
+    NpNLO_axis = stitchResults['reweighting'][list(stitchResults["reweighting"].values().keys())[0]].axis("NpNLO")
+
+    VptBins = [str(k).split(",")[0][1:] for k in VptBins_axis[1:]]
+    NpNLOBins = [str(k).split(",")[0][1:] for k in NpNLO_axis[1:]]
+
+
+    eventTotals = stitchResults["reweighting"].sum("dataset")
+
+    for sample in stitchResults["reweighting"].identifiers(axis="dataset"):
+        print(sample)
+        sample = str(sample)
+        weightList = stitchResults["reweighting"][sample].values()[(sample,)].tolist()
+        exportDict[sample] = {}
+        
+        for i,row in enumerate(weightList):
+            exportDict[sample]["Vpt"+VptBins[i]] = {}
+            for j,column in enumerate(row):
+                fraction = column/eventTotals.values()[()][i][j]
+                if fraction != fraction:
+                    fraction = 0 #protect against 0/0 NaN
+                exportDict[sample]["Vpt"+VptBins[i]]["NpNLO"+NpNLOBins[j]] = fraction
+
+
+    print(json.dumps(exportDict))
+    with open("stitchingWeights_{}.json".format(args.channel),"w") as f:
+        json.dump(exportDict,f,indent=4)
