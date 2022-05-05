@@ -78,21 +78,23 @@ if __name__ == "__main__":
                    #Sample("V11-NLO/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166),
                    #Sample("V11/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.08457),
                    ],
-        "Wln2017": [Sample("V11/W1JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",2661),
-                   Sample("V11/W1JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",286.1),
-                   Sample("V11/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",71.9),
-                   Sample("V11/W1JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",8.05),
-                   Sample("V11/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",0.885),
-                   Sample("V11/W2JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",1615.0),
-                   Sample("V11/W2JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",1331),
-                   Sample("V11/W2JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",277.7),
-                   Sample("V11/W2JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",105.9),
-                   Sample("V11/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",18.67),
-                   Sample("V11/W2JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",3.037),
-                   Sample("V11-NLO_anigamov/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500),
-                   Sample("V11-NLO_anigamov/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750),
-                   Sample("V11-NLO_anigamov/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010),
-                ]
+        "Wln2017": [
+                #Sample("V11/W1JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",0)
+                Sample("V11/W1JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",286.1),
+                Sample("V11_nlo_May21/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",71.9),
+                Sample("V11/W1JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",8.05),
+                Sample("V11-NLO_EventLumi/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.885),
+                Sample("V11/W1JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",2661),
+                Sample("V11/W2JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",1615),
+                Sample("V11/W2JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",277.7),
+                Sample("V11/W2JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",105.9),
+                Sample("V11-NLO_EventLumi/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",18.67),
+                Sample("V11/W2JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",3.037),
+                Sample("V11/W2JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",1331),
+                Sample("V11-NLO_anigamov/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500),
+                Sample("V11-NLO_anigamov/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750),
+                Sample("V11-NLO_anigamov/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010),
+           ] 
     }
 
     tic = time.time()
