@@ -336,7 +336,8 @@
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11-NLO_EventLumi/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1284/210513_124301/0000/tree_90.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11-NLO_EventLumi/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1284/210513_124301/0000/tree_91.root"
             ],
-            "genEventSumw": 1186623326.9789302
+            "genEventSumw": 87512989.0044,
+            "genEventSumwBAD": 1186623326.9789302
         },
         "V11/W1JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8": {
             "xsec": 2661,
@@ -1136,7 +1137,8 @@
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11-NLO_EventLumi/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1286/210513_124428/0001/tree_1441.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11-NLO_EventLumi/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1286/210513_124428/0001/tree_1442.root"
             ],
-            "genEventSumw": 76964392294.58238
+            "genEventSumw" :  4484049668.16,
+            "genEventSumwBAD": 76964392294.58238
         },
         "V11/W2JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8": {
             "xsec": 3.037,

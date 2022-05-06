@@ -87,7 +87,7 @@ if __name__ == "__main__":
         fileset[sample] = samplesToRun[sample]["filelist"]
 
     cluster = LPCCondorCluster()
-    cluster.adapt(minimum=1,maximum=30)
+    cluster.adapt(minimum=1,maximum=50)
     client = Client(cluster)
     exe_args = {
     "client": client,
@@ -129,7 +129,18 @@ if __name__ == "__main__":
 
         leg = ax.legend(bbox_to_anchor=(1,1), loc="upper left")
         plt.savefig("Vptstitched.png",bbox_inches="tight")
+        plt.clf()
 
+    from cycler import cycler
+    fig, ax = plt.subplots()
+    colors = ['#f7fcfd','#e0ecf4','#bfd3e6','#9ebcda','#8c96c6','#8c6bb1','#88419d','#810f7c','#4d004b']
+    ax.set_prop_cycle(cycler('color',colors))
+    ax.semilogy(True)
+    hist.plot1d(output["LHE_Vpt"],stack=False,ax=ax,line_opts=None,fill_opts={'alpha':0.2,'edgecolor': (0,0,0,0.3)},clear=False)
+    # hist.plot2d(output["LHE_Vpt"],ax=ax,xaxis="LHE_Vpt",clear=False)
+
+    leg = ax.legend(bbox_to_anchor=(1,1), loc="upper left")
+    plt.savefig("Vpt_notStitched.png",bbox_inches="tight")
 
 
     exportDict = {}
@@ -151,9 +162,12 @@ if __name__ == "__main__":
         for i,row in enumerate(weightList):
             exportDict[sample]["Vpt"+VptBins[i]] = {}
             for j,column in enumerate(row):
-                fraction = column/eventTotals.values()[()][i][j]
-                if fraction != fraction:
-                    fraction = 0 #protect against 0/0 NaN
+                if eventTotals.values()[()][i][j]!=0:
+                    fraction = column/eventTotals.values()[()][i][j]
+                else:
+                    fraction = 0
+                #if fraction != fraction:
+                    #fraction = 0 #protect against 0/0 NaN
                 exportDict[sample]["Vpt"+VptBins[i]]["NpNLO"+NpNLOBins[j]] = fraction
 
 
