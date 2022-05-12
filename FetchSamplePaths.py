@@ -7,7 +7,7 @@ from coffea import hist,nanoevents
 import time
 
 import matplotlib.pyplot as plt
-
+#import pdb
 from distributed import Client
 from lpcjobqueue import LPCCondorCluster
 
@@ -19,7 +19,7 @@ from lpcjobqueue import LPCCondorCluster
 #       sumw:
 #}
 
-path = "/eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/"
+path = "/eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/"
 
 Vpt_axis = hist.Bin("Vpt", "LHE_Vpt [GeV]", 40, 0, 500)
 VptBins_axis = hist.Bin("VptBins", "LHE_Vpt [GeV]", [0,50,100,150,250,400,2000])
@@ -31,8 +31,9 @@ def xrdfs(fullpath):
     return rootfiles 
 
 class Sample():
-    def __init__(self,name,xsec):
+    def __init__(self,name,xsec,year):
         self.name = name
+        self.year = year
         self.xsec = xsec
         self.genEventSum = 0
         
@@ -40,7 +41,7 @@ class Sample():
                                   "/eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1282/210511_130812/0000/tree_48.root",
                                                          "/eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2017/V11/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8/RunIIFall17NanoAODv4-PU2017_1282/210511_130812/0000/tree_45.root"]
         print("finding files for {}".format(name))
-        self.filelist = ["root://eoscms.cern.ch/"+filename for filename in xrdfs(path+name) if filename.endswith(".root") and filename not in badFileNames]
+        self.filelist = ["root://eoscms.cern.ch/"+filename for filename in xrdfs(path+str(year)+"/"+name) if filename.endswith(".root") and filename not in badFileNames]
         #self.filelist = [self.filelist[0]]
         #self.filelist = ["root://cmsxrootd.fnal.gov//"+filename for filename in xrdfs(path+name) if filename.endswith(".root") and filename not in badFileNames]
 
@@ -59,8 +60,11 @@ class ProcessorSumw(processor.ProcessorABC):
     def process(self, runs):
         dataset = runs.metadata['dataset']
         output = self.accumulator.identity()
-
-        output['genEventSumw'][dataset]+=sum(runs.genEventSumw)
+        #pdb.set_trace() 
+        if "genEventSumw_" in runs.fields:
+            output['genEventSumw'][dataset]+=sum(runs.genEventSumw_)
+        elif "genEventSumw" in runs.fields:
+            output['genEventSumw'][dataset]+=sum(runs.genEventSumw)
         return output
 
     def postprocess(self, accumulator):
@@ -69,41 +73,120 @@ class ProcessorSumw(processor.ProcessorABC):
 
 if __name__ == "__main__":
     samples = {
-        "Znn2017": [Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.4),
-                   #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98),
-                   #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.057),
-                   #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",0.0224),
-                   #Sample("V11/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7),
-                   #Sample("V11/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76),
-                   #Sample("V11-NLO/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166),
-                   #Sample("V11/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.08457),
-                   ],
-        "Wln2017": [
-                #Sample("V11/W1JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",0)
-                Sample("V11/W1JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",2661),
-                Sample("V11/W1JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",286.1),
-                Sample("V11_nlo_May21/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",71.9),
-                Sample("V11/W1JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",8.05),
-                Sample("V11-NLO_EventLumi/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.885),
-                Sample("V11/W2JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",1615),
-                Sample("V11/W2JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",1331),
-                Sample("V11/W2JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",277.7),
-                Sample("V11/W2JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",105.9),
-                Sample("V11-NLO_EventLumi/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",18.67),
-                Sample("V11/W2JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",3.037),
-                Sample("V11-NLO_anigamov/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500),
-                Sample("V11-NLO_anigamov/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750),
-                Sample("V11-NLO_anigamov/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010),
-           ] 
+        #"Znn2017": [Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.4,2017),
+        #           #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2017),
+        #           #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.057,2017),
+        #           #Sample("V11/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",0.0224,2017),
+        #           #Sample("V11/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2017),
+        #           #Sample("V11/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2017),
+        #           #Sample("V11-NLO/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2017),
+        #           #Sample("V11/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.08457,2017),
+        #           ],
+        #"Wln2017": [
+        #        #Sample("V11/W1JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",0,2017)
+        #        Sample("V11/W1JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",2661,2017),
+        #        Sample("V11/W1JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",286.1,2017),
+        #        Sample("V11_nlo_May21/W1JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",71.9,2017),
+        #        Sample("V11/W1JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",8.05,2017),
+        #        Sample("V11-NLO_EventLumi/W1JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.885,2017),
+        #        Sample("V11/W2JetsToLNu_LHEWpT_0-50_TuneCP5_13TeV-amcnloFXFX-pythia8",1615,2017),
+        #        Sample("V11/W2JetsToLNu_LHEWpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",1331,2017),
+        #        Sample("V11/W2JetsToLNu_LHEWpT_100-150_TuneCP5_13TeV-amcnloFXFX-pythia8",277.7,2017),
+        #        Sample("V11/W2JetsToLNu_LHEWpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",105.9,2017),
+        #        Sample("V11-NLO_EventLumi/W2JetsToLNu_LHEWpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",18.67,2017),
+        #        Sample("V11/W2JetsToLNu_LHEWpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",3.037,2017),
+        #        Sample("V11-NLO_anigamov/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500,2017),
+        #        Sample("V11-NLO_anigamov/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2017),
+        #        Sample("V11-NLO_anigamov/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2017),
+        #   ],
+        "Znn2018Xbb": [
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
+            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
+            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
+            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
+            Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
+        ],
+        "Znn2018Max": [
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
+            Sample("V12-nlo/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
+            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
+            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
+            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
+            Sample("V12-NLO_EventLumi/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
+            Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
+        ],
+        "Wln2018Xbb": [
+            Sample("V12/WJetsToLNu_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",3570,2018),
+            Sample("V12/WJetsToLNu_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",770.8,2018),
+            Sample("V12/WJetsToLNu_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",28.06,2018),
+            Sample("V12/WJetsToLNu_Pt-400To600_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.591,2018),
+            Sample("V12/WJetsToLNu_Pt-600ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",0.5495,2018),
+            Sample("V12/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500,2018),
+            Sample("V12/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2018),
+            Sample("V12-NLO/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2018),
+        ],
+        "Wln2018Max": [
+            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",3570,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",770.8,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",28.06,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-400To600_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.591,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-600ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",0.5495,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500,2018),
+            Sample("V12-NLO_EventLumi/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2018),
+            Sample("V12-NLO/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2018),
+        ],
+        "Zll2018Xbb": [
+            Sample("V12/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8",6508,2018),
+            Sample("V12/DY1JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",316.6,2018),
+            Sample("V12/DY1JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",9.543,2018),
+            Sample("V12/DY1JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",1.098,2018),
+            Sample("V12/DY1JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.1193,2018),
+            Sample("V12/DY2JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",169.6,2018),
+            Sample("V12/DY2JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",15.65,2018),
+            Sample("V12/DY2JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.737,2018),
+            Sample("V12/DY2JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.4477,2018),
+            Sample("V12/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",5333,2018),
+            Sample("V12/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",965,2018),
+            Sample("V12/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",362,2018),
+            Sample("V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",409.8,2018),
+            Sample("V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",97.26,2018),
+            Sample("V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.764,2018),
+            Sample("V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
+            Sample("V12/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",.0483,2018)
+        ],
+        "Zll2018Max": [
+            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",9.543,2018),
+            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",1.098,2018),
+            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.1193,2018),
+            Sample("V12/DY1JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",316.6,2018),
+            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",15.65,2018),
+            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.737,2018),
+            Sample("V12/DY2JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.4477,2018),
+            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",169.6,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",5333,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",965,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",362,2018),
+            Sample("V12-NLO/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8",6508,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",409.8,2018),
+            Sample("V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",97.26,2018),
+            Sample("V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.764,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
+            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",.0483,2018)
+        ],
+
     }
 
     tic = time.time()
     cluster = LPCCondorCluster()
-    cluster.adapt(minimum=1,maximum=10)
+    cluster.adapt(minimum=1,maximum=50)
     client = Client(cluster)
 
 
-    samplesToRun = samples["Wln2017"]
+    samplesToRun = samples["Znn2018Xbb"]+samples["Znn2018Max"]+samples["Wln2018Xbb"]+samples["Wln2018Max"]+samples["Zll2018Xbb"]+samples["Zll2018Max"]
     fileset = {}
     for sample in samplesToRun:
         fileset[sample.name] = sample.filelist
@@ -115,12 +198,14 @@ if __name__ == "__main__":
     #    processor_instance=ProcessorSumw(),
     #    executor=processor.iterative_executor,
     #    executor_args={"schema": BaseSchema },
+    #    #executor_args={"schema": nanoevents.NanoAODSchema},
     #    #maxchunks=4,
     #)
     exe_args = {
     "client": client,
     "savemetrics": True,
-    "schema": nanoevents.NanoAODSchema,
+    #"schema": nanoevents.NanoAODSchema,
+    "schema": BaseSchema,
     "align_clusters": True,
     }
 

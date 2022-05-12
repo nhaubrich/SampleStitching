@@ -13,7 +13,7 @@ from distributed import Client
 from lpcjobqueue import LPCCondorCluster
 
 Vpt_axis = hist.Bin("Vpt", "LHE_Vpt [GeV]", 40, 0, 500)
-VptBins_axis = hist.Bin("VptBins", "LHE_Vpt [GeV]", [0,50,100,150,250,400,2000])
+VptBins_axis = hist.Bin("VptBins", "LHE_Vpt [GeV]", [0,50,100,150,250,400,600,2000])
 NpNLO_axis = hist.Bin("NpNLO","NpNLO",3,0,3)
 
 class Processor(processor.ProcessorABC):
@@ -23,7 +23,7 @@ class Processor(processor.ProcessorABC):
         dataset_axis = hist.Cat("dataset", "dataset")
 
         Vpt_axis = hist.Bin("Vpt", "LHE_Vpt [GeV]", 40, 0, 500)
-        VptBins_axis = hist.Bin("VptBins", "LHE_Vpt [GeV]", [0,50,100,150,250,400,2000])
+        VptBins_axis = hist.Bin("VptBins", "LHE_Vpt [GeV]", [0,50,100,150,250,400,600,2000])
         NpNLO_axis = hist.Bin("NpNLO","NpNLO",3,0,3)
         
         self._accumulator = processor.dict_accumulator({
@@ -87,7 +87,7 @@ if __name__ == "__main__":
         fileset[sample] = samplesToRun[sample]["filelist"]
 
     cluster = LPCCondorCluster()
-    cluster.adapt(minimum=1,maximum=50)
+    cluster.adapt(minimum=1,maximum=100)
     client = Client(cluster)
     exe_args = {
     "client": client,
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         plt.title(dataset)
         plt.savefig(str(dataset).split("/")[-1]+".png")
     
-    with open("stitchingResults.pickle","wb") as pickleOut:
+    with open("stitchingResults_{}.pickle".format(args.channel),"wb") as pickleOut:
         pickle.dump(stitchResults,pickleOut)
 
 
