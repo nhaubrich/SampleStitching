@@ -1,0 +1,258 @@
+{
+    "V12-NLO/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.9986337709835911
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.9038860904546959
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.27240043346231485
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.27351317079890375
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.42035599327644935
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.013848371862609498
+        }
+    },
+    "V12/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 1.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.8146002317497103,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.10551330798479087,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.11965811965811966,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.16666666666666666,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.8354279611334905,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0986168747537659,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.003880581776030386,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.004029027648818442,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0078072931543368565,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.00013864952588794622,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12/WJetsToLNu_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0005270428715710289,
+            "NpNLO2": 1.25469337869248e-06
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.18821894768567088,
+            "NpNLO2": 0.028403677788996325
+        },
+        "Vpt100": {
+            "NpNLO0": 0.8944866920152091,
+            "NpNLO1": 0.9946776743002361,
+            "NpNLO2": 0.7270027033969695
+        },
+        "Vpt150": {
+            "NpNLO0": 0.8803418803418803,
+            "NpNLO1": 0.9940855284218163,
+            "NpNLO2": 0.724808611185927
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.05097749849249421,
+            "NpNLO2": 0.024752919371614196
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12/WJetsToLNu_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0018848753395192118,
+            "NpNLO2": 0.0016780895145555215
+        },
+        "Vpt250": {
+            "NpNLO0": 0.8333333333333334,
+            "NpNLO1": 0.8180837221111429,
+            "NpNLO2": 0.4535320822796977
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0002467961560805443,
+            "NpNLO2": 0.00025548006794499575
+        }
+    },
+    "V12/WJetsToLNu_Pt-400To600_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 5.68589846008812e-07,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.12313148624202609,
+            "NpNLO2": 0.10135900507223873
+        },
+        "Vpt400": {
+            "NpNLO0": 0.8297872340425532,
+            "NpNLO1": 0.8552485084777253,
+            "NpNLO2": 0.7907663316196842
+        }
+    },
+    "V12/WJetsToLNu_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.16404499599493852,
+            "NpNLO2": 0.0013649743230301876
+        },
+        "Vpt50": {
+            "NpNLO0": 0.1853997682502897,
+            "NpNLO1": 0.7131641775605632,
+            "NpNLO2": 0.06771023175630776
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0014417439237335114,
+            "NpNLO2": 0.0005968631407156751
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 1.2850061371893112e-07
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12/WJetsToLNu_Pt-600ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.1702127659574468,
+            "NpNLO1": 0.14436604584030624,
+            "NpNLO2": 0.1951298164497613
+        }
+    }
+}
