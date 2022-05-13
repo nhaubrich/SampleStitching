@@ -1,0 +1,631 @@
+{
+    "V12-NLO/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.3659900220343444,
+            "NpNLO1": 0.15251363929254555,
+            "NpNLO2": 0.1433197227713345
+        },
+        "Vpt50": {
+            "NpNLO0": 0.047422499341354174,
+            "NpNLO1": 0.045145350571206284,
+            "NpNLO2": 0.040583385968601476
+        },
+        "Vpt100": {
+            "NpNLO0": 0.02072936660268714,
+            "NpNLO1": 0.020572217178598855,
+            "NpNLO2": 0.021288893898725868
+        },
+        "Vpt150": {
+            "NpNLO0": 0.012145748987854251,
+            "NpNLO1": 0.0065742777354804004,
+            "NpNLO2": 0.006973829948583304
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0012631605804160181,
+            "NpNLO2": 0.0021362513954464152
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0011609973481650493,
+            "NpNLO2": 0.003620296224630719
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0004326616261587219,
+            "NpNLO2": 0.0007031051829128134
+        }
+    },
+    "V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.6988801739580103,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 1.0997393177921105e-07,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.6684546595075104,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.9800411342066535,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.397767466009021,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.7033998579742804
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 7.463278059798471e-08
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.5037828371173895
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.20101028889850672
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.10590530089329858
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 2.300235157640636e-08
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.6340099779656556,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.11068177161090131,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.04376199616122841,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.03643724696356275,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.008823529411764706,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.5,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.7895615963460518,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.2414810079068721,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.11252298646807334,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.03577455649230518,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.006706650255623407,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.006048080017026616,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0023616113761163572,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.8206900887295303
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.23491969946795113
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.1238091485033079
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.04055406592326747
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.012380421493106393
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.021234925241993483
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.004023925046824101
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 1.8726077880157167e-05,
+            "NpNLO2": 3.218195365876354e-06
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.013701478573466265,
+            "NpNLO2": 0.017229644889424515
+        },
+        "Vpt100": {
+            "NpNLO0": 0.9355086372360845,
+            "NpNLO1": 0.8224846531638887,
+            "NpNLO2": 0.7407480615102839
+        },
+        "Vpt150": {
+            "NpNLO0": 0.951417004048583,
+            "NpNLO1": 0.25202632289523197,
+            "NpNLO2": 0.24068324252925025
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0012791068005240038,
+            "NpNLO2": 0.0016257258597659008
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.057906038283522476,
+            "NpNLO2": 0.03598697030376934
+        },
+        "Vpt50": {
+            "NpNLO0": 0.8418957290477445,
+            "NpNLO1": 0.6385088203218208,
+            "NpNLO2": 0.5062569229786684
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.015948626058697176,
+            "NpNLO2": 0.008248251436509467
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 7.16230279494542e-08,
+            "NpNLO2": 1.1961222819731306e-06
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12-NLO_EventLumi/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 1.0997393177921105e-07,
+            "NpNLO2": 3.7316390298992353e-08
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 3.530400276783382e-05,
+            "NpNLO2": 0.0005947946803411696
+        },
+        "Vpt600": {
+            "NpNLO0": 1.0,
+            "NpNLO1": 0.5983638179504097,
+            "NpNLO2": 0.8135970807072805
+        }
+    },
+    "V12/DY1JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.061163306993721696,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.028470372378397887,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        }
+    },
+    "V12/DY2JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.9397218457558357
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.18036054152079486
+        }
+    },
+    "V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 3.5632912867337026e-08,
+            "NpNLO2": 5.779684774065861e-08
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 1.144752343959921e-06,
+            "NpNLO2": 3.43757874203806e-07
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.006744597295944203,
+            "NpNLO2": 0.008387784499985002
+        },
+        "Vpt250": {
+            "NpNLO0": 0.9911764705882353,
+            "NpNLO1": 0.32227838713111445,
+            "NpNLO2": 0.4800347982802816
+        },
+        "Vpt400": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.005734378735289578,
+            "NpNLO2": 0.016063454242343074
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 1.0817002814043282e-06
+        }
+    },
+    "V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
+        "Vpt0": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt50": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt100": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt150": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0,
+            "NpNLO2": 0.0
+        },
+        "Vpt250": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 1.7815776948232192e-05,
+            "NpNLO2": 3.9853904839323835e-05
+        },
+        "Vpt400": {
+            "NpNLO0": 0.5,
+            "NpNLO1": 0.006980105690097429,
+            "NpNLO2": 0.018764683854855885
+        },
+        "Vpt600": {
+            "NpNLO0": 0.0,
+            "NpNLO1": 0.0010744430382941595,
+            "NpNLO2": 0.0013142658419062587
+        }
+    }
+}

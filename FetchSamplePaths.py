@@ -99,27 +99,27 @@ if __name__ == "__main__":
         #        Sample("V11-NLO_anigamov/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2017),
         #        Sample("V11-NLO_anigamov/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2017),
         #   ],
-        "Znn2018Xbb": [
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
-            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
-            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
-            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
-            Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
-        ],
-        "Znn2018Max": [
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
-            Sample("V12-nlo/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
-            Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
-            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
-            Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
-            Sample("V12-NLO_EventLumi/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
-            Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
-        ],
-        "Wln2018Xbb": [
+        #"Znn2018Xbb": [
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
+        #    Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
+        #    Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
+        #    Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
+        #    Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
+        #],
+        #"Znn2018Max": [
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",596.3,2018),
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",17.98,2018),
+        #    Sample("V12-nlo/Z1JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.045,2018),
+        #    Sample("V12/Z1JetsToNuNu_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.2243,2018),
+        #    Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",325.7,2018),
+        #    Sample("V12/Z2JetsToNuNu_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",29.76,2018),
+        #    Sample("V12-NLO_EventLumi/Z2JetsToNuNu_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",5.166,2018),
+        #    Sample("V12/Z2JetsToNuNU_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.8457,2018)
+        #],
+        "Wln2018": [
             Sample("V12/WJetsToLNu_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",3570,2018),
             Sample("V12/WJetsToLNu_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",770.8,2018),
             Sample("V12/WJetsToLNu_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",28.06,2018),
@@ -127,19 +127,9 @@ if __name__ == "__main__":
             Sample("V12/WJetsToLNu_Pt-600ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",0.5495,2018),
             Sample("V12/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500,2018),
             Sample("V12/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2018),
-            Sample("V12-NLO/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2018),
+            Sample("V12/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2018),
         ],
-        "Wln2018Max": [
-            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",3570,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",770.8,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",28.06,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-400To600_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.591,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_Pt-600ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",0.5495,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",54500,2018),
-            Sample("V12-NLO_EventLumi/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",8750,2018),
-            Sample("V12-NLO/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",3010,2018),
-        ],
-        "Zll2018Xbb": [
+        "Zll2018": [
             Sample("V12/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8",6508,2018),
             Sample("V12/DY1JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",316.6,2018),
             Sample("V12/DY1JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",9.543,2018),
@@ -158,25 +148,6 @@ if __name__ == "__main__":
             Sample("V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
             Sample("V12/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",.0483,2018)
         ],
-        "Zll2018Max": [
-            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",9.543,2018),
-            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",1.098,2018),
-            Sample("V12-NLO_EventLumi/DY1JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.1193,2018),
-            Sample("V12/DY1JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",316.6,2018),
-            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_150-250_TuneCP5_13TeV-amcnloFXFX-pythia8",15.65,2018),
-            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_250-400_TuneCP5_13TeV-amcnloFXFX-pythia8",2.737,2018),
-            Sample("V12/DY2JetsToLL_M-50_LHEZpT_400-inf_TuneCP5_13TeV-amcnloFXFX-pythia8",.4477,2018),
-            Sample("V12-NLO_EventLumi/DY2JetsToLL_M-50_LHEZpT_50-150_TuneCP5_13TeV-amcnloFXFX-pythia8",169.6,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",5333,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",965,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",362,2018),
-            Sample("V12-NLO/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8",6508,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",409.8,2018),
-            Sample("V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",97.26,2018),
-            Sample("V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.764,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
-            Sample("V12-NLO_EventLumi/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",.0483,2018)
-        ],
 
     }
 
@@ -186,7 +157,7 @@ if __name__ == "__main__":
     client = Client(cluster)
 
 
-    samplesToRun = samples["Znn2018Xbb"]+samples["Znn2018Max"]+samples["Wln2018Xbb"]+samples["Wln2018Max"]+samples["Zll2018Xbb"]+samples["Zll2018Max"]
+    samplesToRun = samples["Wln2018"]+samples["Zll2018"]
     fileset = {}
     for sample in samplesToRun:
         fileset[sample.name] = sample.filelist
