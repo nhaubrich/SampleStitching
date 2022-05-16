@@ -29,7 +29,8 @@ class Processor(processor.ProcessorABC):
         self._accumulator = processor.dict_accumulator({
             'LHE_Vpt': hist.Hist("Counts", dataset_axis, Vpt_axis),
             'reweighting': hist.Hist("Reweighting",dataset_axis,VptBins_axis,NpNLO_axis),
-            'LHE_Vptstitched': hist.Hist("Counts", dataset_axis, Vpt_axis),
+            'validation': hist.Hist("Counts", dataset_axis, Vpt_axis,NpNLO_axis),
+            'nostitching': hist.Hist("Counts", dataset_axis, Vpt_axis,NpNLO_axis),
 
 #             'LHE_Vpt': hist.Hist("Counts", dataset_axis, Vpt_axis, NpNLO_axis),
 #             'LHE_NpNLO': hist.Hist("Counts", dataset_axis, Vpt_axis),
@@ -50,8 +51,8 @@ class Processor(processor.ProcessorABC):
         if self.stitchResults!=None:
             tot=self.stitchResults["reweighting"].sum("dataset",overflow="all").values(overflow="all")[()][VptBins_axis.index(Vpt),NpNLO_axis.index(nj)]
             sampletot=self.stitchResults["reweighting"].values(overflow="all")[str(dataset),][VptBins_axis.index(Vpt),NpNLO_axis.index(nj)]
-            output['LHE_Vptstitched'].fill(dataset=dataset, Vpt=Vpt,weight=events.genWeight*sampletot/tot)
-
+            output['validation'].fill(dataset=dataset, Vpt=Vpt, NpNLO=nj,weight=events.genWeight*sampletot/tot)
+            output['nostitching'].fill(dataset=dataset, Vpt=Vpt, NpNLO=nj,weight=events.genWeight)
         return output
 
     def postprocess(self, accumulator):
@@ -60,8 +61,9 @@ class Processor(processor.ProcessorABC):
             intWeights[sample] = self.sampleInfo[sample]["xsec"]/self.sampleInfo[sample]["genEventSumw"]
         
         accumulator["LHE_Vpt"].scale(intWeights,axis="dataset")
-        if self.stitchResults!=None:
-            accumulator["LHE_Vptstitched"].scale(intWeights,axis="dataset")
+        
+        accumulator["validation"].scale(intWeights,axis="dataset")
+        accumulator["nostitching"].scale(intWeights,axis="dataset")
 
         return accumulator
 
@@ -87,13 +89,14 @@ if __name__ == "__main__":
         fileset[sample] = samplesToRun[sample]["filelist"]
 
     cluster = LPCCondorCluster()
-    cluster.adapt(minimum=1,maximum=100)
+    cluster.adapt(minimum=1,maximum=300)
     client = Client(cluster)
     exe_args = {
     "client": client,
     "savemetrics": True,
     "schema": nanoevents.NanoAODSchema,
     "align_clusters": True,
+    "xrootdtimeout": 1200,
     }
     client.wait_for_workers(1)
     output,meta = processor.run_uproot_job(
@@ -118,18 +121,20 @@ if __name__ == "__main__":
 
 
 
-    if args.stitchResults!=None:
-        from cycler import cycler
-        fig, ax = plt.subplots()
-        colors = ['#f7fcfd','#e0ecf4','#bfd3e6','#9ebcda','#8c96c6','#8c6bb1','#88419d','#810f7c','#4d004b']
-        ax.set_prop_cycle(cycler('color',colors))
-        ax.semilogy(True)
-        hist.plot1d(output["LHE_Vptstitched"],stack=True,ax=ax,line_opts=None,fill_opts={'alpha':0.2,'edgecolor': (0,0,0,0.3)},clear=False)
-        # hist.plot2d(output["LHE_Vpt"],ax=ax,xaxis="LHE_Vpt",clear=False)
+    #if args.stitchResults!=None:
+    #    from cycler import cycler
+    #    fig, ax = plt.subplots()
+    #    colors = ['#f7fcfd','#e0ecf4','#bfd3e6','#9ebcda','#8c96c6','#8c6bb1','#88419d','#810f7c','#4d004b']
+    #    ax.set_prop_cycle(cycler('color',colors))
+    #    ax.semilogy(True)
+    #    hist.plot1d(output["validation"].integrate("NpNLO"),stack=True,ax=ax,line_opts=None,fill_opts={'alpha':0.2,'edgecolor': (0,0,0,0.3)},clear=False)
+    #    # hist.plot2d(output["LHE_Vpt"],ax=ax,xaxis="LHE_Vpt",clear=False)
 
-        leg = ax.legend(bbox_to_anchor=(1,1), loc="upper left")
-        plt.savefig("Vptstitched.png",bbox_inches="tight")
-        plt.clf()
+    #    leg = ax.legend(bbox_to_anchor=(1,1), loc="upper left")
+    #    plt.savefig("validation_{}.png".format(args.channel),bbox_inches="tight")
+    #    plt.clf()
+
+
 
     from cycler import cycler
     fig, ax = plt.subplots()
