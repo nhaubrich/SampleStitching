@@ -14189,7 +14189,7 @@
             "genEventSumw": 162847517628.1457
         },
         "V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
-            "xsec": 409.8,
+            "xsec": 97.26,
             "filelist": [
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O94/210512_144833/0000/tree_1.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O94/210512_144833/0000/tree_10.root",
@@ -15014,7 +15014,7 @@
             "genEventSumw": 17884716460.56131
         },
         "V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
-            "xsec": 97.26,
+            "xsec": 3.764,
             "filelist": [
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O95/210512_144943/0000/tree_1.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O95/210512_144943/0000/tree_10.root",
@@ -15223,7 +15223,7 @@
             "genEventSumw": 165953667.41798466
         },
         "V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
-            "xsec": 3.764,
+            "xsec": 0.5152,
             "filelist": [
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O96/210512_145052/0000/tree_1.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O96/210512_145052/0000/tree_10.root",
@@ -15248,7 +15248,7 @@
             "genEventSumw": 2070432.0904712914
         },
         "V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8": {
-            "xsec": 0.5152,
+            "xsec": 409.8,
             "filelist": [
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O93/210512_144729/0000/tree_1.root",
                 "root://eoscms.cern.ch//eos/cms/store/group/phys_higgs/hbb/ntuples/VHbbPostNano/2018/V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIIAutumn18NanoAODv6-Nano25O93/210512_144729/0000/tree_10.root",

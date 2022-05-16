@@ -142,10 +142,10 @@ if __name__ == "__main__":
             Sample("V12/DYJetsToLL_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8",5333,2018),
             Sample("V12/DYJetsToLL_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8",965,2018),
             Sample("V12/DYJetsToLL_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8",362,2018),
-            Sample("V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",409.8,2018),
-            Sample("V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",97.26,2018),
-            Sample("V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.764,2018),
-            Sample("V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
+            Sample("V12/DYJetsToLL_Pt-50To100_TuneCP5_13TeV-amcatnloFXFX-pythia8",409.8,2018),
+            Sample("V12/DYJetsToLL_Pt-100To250_TuneCP5_13TeV-amcatnloFXFX-pythia8",97.26,2018),
+            Sample("V12/DYJetsToLL_Pt-250To400_TuneCP5_13TeV-amcatnloFXFX-pythia8",3.764,2018),
+            Sample("V12/DYJetsToLL_Pt-400To650_TuneCP5_13TeV-amcatnloFXFX-pythia8",.5152,2018),
             Sample("V12/DYJetsToLL_Pt-650ToInf_TuneCP5_13TeV-amcatnloFXFX-pythia8",.0483,2018)
         ],
 
