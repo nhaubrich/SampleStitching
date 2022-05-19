@@ -6,6 +6,8 @@ from coffea.nanoevents import BaseSchema
 from coffea import hist,nanoevents
 import time
 
+import sys
+
 import matplotlib.pyplot as plt
 #import pdb
 from distributed import Client
@@ -207,5 +209,5 @@ if __name__ == "__main__":
             outputSamples[channel][sample.name]["genEventSumw"] = runs["genEventSumw"][sample.name]
             #outputSamples[channel][sample.name]["intWeight"] = scaleFactors[sample.name]
 
-    with open("sampleInfo.json","w") as f:
+    with open(sys.argv[1],"w") as f:
         json.dump(outputSamples,f,indent=4)
